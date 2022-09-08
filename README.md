@@ -12,9 +12,9 @@ L'IDE étant maintenant installé, il est temps de présenter l'IDE qui nous ser
 - 👉 [🗔 Interface VSCode EPuck2](https://github.com/epfl-mobots/MICRO-315-TPs-Student/wiki/%F0%9F%97%94-Interface-VSCode-EPuck2)
 
 # Partie 2 - Présentation de l'EPuck2
-explication de l'architecture de l'EPuck2:
+- explication de l'architecture de l'EPuck2:
     - STM32 principal, programmeur et ESP32
     - port com
     - programmeur (bmp) de l'epuck, gdb, mode DFU
     - communication série
-test de l'EPuck2
+- test de l'EPuck2

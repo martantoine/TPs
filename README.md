@@ -14,17 +14,74 @@ The IDE now freshly installed, let's start by quickly presenting IDE which we wi
 # Part 2 - Presenting the EPuck2
 - 👉 [Click here](https://github.com/epfl-mobots/MICRO-315-TPs-Student/wiki/EPuck2-%7C-Presenting-the-EPuck2)
 ## Demo program 1
-- open the project ST
-- compile
-- run & debug
+- open in VSCode EPuck2 the folder under Workplace_EPuck2/Lib
+- run the task `Make ST`
+- go in the **Run and Debug** and click on `Start Debugging` OR press `F5`
+- run the task `Run ST`
 
 ## Demo program 2
-- open the project ST
-- compile
-- run & debug
+- still in the folder Workplace_EPuck2/Lib
+- run the task `Make e-puck2_main-processor`
+- go in the **Run and Debug** and click on `Start Debugging` OR press `F5`
+- run the task `Run EPuckMonitor`
 
 # Part 3 - Presenting Git
 - 👉 [Click here](https://github.com/epfl-mobots/MICRO-315-TPs-Student/wiki/Git-Presenting-Git)
+- take inspiration [here]https://rogerdudler.github.io/git-guide/)
 ## Exercise with git
+Let's 
 
-# Part 4 - STM32F4 Microcontroller and GPIO configuration
+# Part 4 - Setting up your group TP's repository
+First clone the repository in the Workplace
+```
+git clone https://github.com/epfl-mobots/MICRO-315-TPs-Student .../Workplace_EPuck2/TPs
+cd Workplace_EPuck2/TPs
+```
+Let's check the already existing remotes and branches
+```
+$ git remote -v
+```
+- As we can see, there is one remote named **origin** pointing to the url of the cloned repository
+- However, you have no right to push (write) anything on this github repository
+- To do so, you have to connect this repository to your github repository
+- A **remote** is a version of repository stored elsewhere, usually on a server 
+```
+$ git remote -v
+origin        https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
+origin        https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
+```
+First, rename the **origin** remote into **upstream**
+```
+$ git remote rename origin upstream
+$ git remote -v
+upstream      https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
+upstream      https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
+```
+- Now you have to create a github repository which is pretty straight forward
+- Click on `New Repository`
+![]()
+- Name it as you wish, for instance **MICRO-315-TPs**
+![]()
+- That's it !
+- Ignore github's recommandations
+![]()
+
+Next, add the remote, replace the github link with the one of your repo
+```
+$ git remote add origin https://github.com/username/MICRO-315-TPs
+$ git remote -v
+origin          https://github.com/martantoine/TPs (fetch)
+origin          https://github.com/martantoine/TPs (push)
+upstream        https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
+upstream        https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
+```
+You can now push all those changes to your repo
+```
+git push -u origin --all
+```
+
+# Part 5 - STM32F4 Microcontroller and GPIO configuration
+- First, you must be in the right branch
+```
+git checkout TP1_Donnee
+```

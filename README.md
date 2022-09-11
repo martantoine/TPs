@@ -63,11 +63,18 @@ Let's
 - Create the github repository which will store your work's group during the labs
   - ⚠ Create ONLY ONE github repository per group
   - Click on `New Repository`
-  ![]()
+    <p float="left">
+      <img src="https://github.com/epfl-mobots/MICRO-315-TPs-Student/blob/TP1_Exercise/pictures/new_repo_1.PNG" alt="drawing" width="500"/>
+    </p>
   - Name it as you wish, for instance **MICRO-315-TPs**
-  ![]()
+    <p float="left">
+      <img src="https://github.com/epfl-mobots/MICRO-315-TPs-Student/blob/TP1_Exercise/pictures/new_repo_2.PNG" alt="drawing" width="500"/>
+    </p>
   - Add your workmate in the collaborator list
-    - ![]()
+    <p float="left">
+      <img src="https://github.com/epfl-mobots/MICRO-315-TPs-Student/blob/TP1_Exercise/pictures/collaborator.PNG" alt="drawing" width="500"/>
+    </p>
+    
     - your workmate will receive the invitation by e-mail
   - That's it !
   - 💡 Ignore github's tips on quick setup

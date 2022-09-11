@@ -32,56 +32,79 @@ The IDE now freshly installed, let's start by quickly presenting IDE which we wi
 Let's 
 
 # Part 4 - Setting up your group TP's repository
-First clone the repository in the Workplace
-```
-git clone https://github.com/epfl-mobots/MICRO-315-TPs-Student .../Workplace_EPuck2/TPs
-cd Workplace_EPuck2/TPs
-```
-Let's check the already existing remotes and branches
-```
-$ git remote -v
-```
-- As we can see, there is one remote named **origin** pointing to the url of the cloned repository
-- However, you have no right to push (write) anything on this github repository
-- To do so, you have to connect this repository to your github repository
-- A **remote** is a version of repository stored elsewhere, usually on a server 
-```
-$ git remote -v
-origin        https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
-origin        https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
-```
-First, rename the **origin** remote into **upstream**
-```
-$ git remote rename origin upstream
-$ git remote -v
-upstream      https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
-upstream      https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
-```
-- Now you have to create a github repository which is pretty straight forward
-- Click on `New Repository`
-![]()
-- Name it as you wish, for instance **MICRO-315-TPs**
-![]()
-- That's it !
-- Ignore github's recommandations
-![]()
+- This part explains how to set up the github repository that you will BOTH be using during the labs
+- It is very important to use the git tool
+- Only ONE person needs to perform the initialization of the github repository, this person will have to follow the steps in Computer1's section
+- The other person will have to follow the steps in Computer2's section
+- ⚠ The two memnbers of the group must create github account if they do not own one
+## Computer 1
+- Clone the repository in the Workplace
+  ```
+  git clone https://github.com/epfl-mobots/MICRO-315-TPs-Student .../Workplace_EPuck2/TPs
+  cd Workplace_EPuck2/TPs
+  ```
+- Let's check the already existing remotes and branches
+  ```
+  $ git remote -v
+  origin        https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
+  origin        https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
+  ```
+  - As we can see, there is one remote named **origin** pointing to the url of the cloned repository
+  - However, you have no right to push (write) anything on this github repository
+  - To do so, you have to connect this repository to your github repository
+  - 💡 A **remote** is a version of repository stored elsewhere, usually on a server 
+- Rename the **origin** remote into **upstream**
+  ```
+  $ git remote rename origin upstream
+  $ git remote -v
+  upstream      https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
+  upstream      https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
+  ```
+- Create the github repository which will store your work's group during the labs
+  - ⚠ Create ONLY ONE github repository per group
+  - Click on `New Repository`
+  ![]()
+  - Name it as you wish, for instance **MICRO-315-TPs**
+  ![]()
+  - Add your workmate in the collaborator list
+    - ![]()
+    - your workmate will receive the invitation by e-mail
+  - That's it !
+  - 💡 Ignore github's tips on quick setup
+- Add the remote, replace the github link with the one of your repo
+  ```
+  $ git remote add origin https://github.com/username/MICRO-315-TPs
+  $ git remote -v
+  origin          https://github.com/username/TPs (fetch)
+  origin          https://github.com/username/TPs (push)
+  upstream        https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
+  upstream        https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
+  ```
+- Now push all those changes to your repo
+  ```
+  git push -u origin --all
+  ```
+- Checkout to TP1_Exercise branch and push the changes to your repo
+  ```
+  $ git checkout TP1_Exercise
+  $ git push -u origin --all
+  ```
 
-Next, add the remote, replace the github link with the one of your repo
-```
-$ git remote add origin https://github.com/username/MICRO-315-TPs
-$ git remote -v
-origin          https://github.com/martantoine/TPs (fetch)
-origin          https://github.com/martantoine/TPs (push)
-upstream        https://github.com/epfl-mobots/MICRO-315-TPs-Student (fetch)
-upstream        https://github.com/epfl-mobots/MICRO-315-TPs-Student (push)
-```
-You can now push all those changes to your repo
-```
-git push -u origin --all
-```
+## Computer 2
+- Execute this steps only once the work on computer 1 is over
+- Launch a terminal in the Workplace_EPuck2 directory
+- Clone your workmate repository
+  ```
+  & git clone https://github.com/username/TPs
+  ```
+- Add the remote pointing to https://github.com/epfl-mobots/MICRO-315-TPs-Student
+  ```
+  & git remote add upstream https://github.com/epfl-mobots/MICRO-315-TPs-Student
+  ```
+- Checkout to TP1_Exercise branch
+  ```
+  $ git checkout TP1_Exercise
+  ```
 
 # Part 5 - STM32F4 Microcontroller and GPIO configuration
-- First, you must be in the right branch
-```
-git checkout TP1_Donnee
-```
+  
